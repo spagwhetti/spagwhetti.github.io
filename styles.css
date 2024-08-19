@@ -2,6 +2,7 @@ body {
   /* ... */
   background-color: #181818; /* Darker background */
   color: #808080; /* Lighter text color */
+  font-family: Arial, sans-serif;
 }
 
 header, footer {
@@ -25,4 +26,6 @@ nav li {
   flex-direction: column;
   align-items: center; /* Center content vertically */
   border: 1px solid #444;
+  padding: 20px; /* Add padding to the content area */
+  margin: 20px auto;
 }
