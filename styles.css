@@ -8,6 +8,7 @@ body {
 header, footer {
   /* ... */
   background-color: #282828; /* Darker gray for header and footer */
+  margin: 5px;
 }
 
 nav ul {
