@@ -1,0 +1,26 @@
+body {
+  background-color: #181818; /* Dark background color */
+  color: #fff; /* Text color */
+  font-family: Arial, sans-serif;
+}
+
+header, footer {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+.about-me {
+  text-align: center;
+  background-color: #282828; /* Slightly lighter gray for the box */
+  padding: 20px;
+  border-radius: 5px;
+}
