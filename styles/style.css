@@ -120,11 +120,11 @@ li:hover code {
 }
 
 .list-element-selected {
-    background-color: var(--gray);
+    background-color: var(--bg_s);
 }
 
 .list-element-selected p {
-    color: var(--fg);
+    color: var(--gray);
 }
 
 .list-element-selected code {
