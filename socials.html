@@ -8,15 +8,15 @@
     <title>spagwhetti bolognese</title>
     <script src="scripts/index.js" defer></script>
     <link rel="stylesheet" href="styles/style.css">
-<!--    <noscript>-->
-<!--        <link rel="stylesheet" href="styles/noscript.css">-->
-<!--    </noscript>-->
+    <noscript>
+        <link rel="stylesheet" href="styles/noscript.css">
+    </noscript>
 </head>
 <body>
 <div id="container">
-    <div class="card" style="width: 768px; min-height: 256px; margin: 8px">
+    <div class="card" style="width: 768px; min-height: 256px; margin: 8px; display: flex; flex-direction: column;">
         <div class="card-header">
-            <p style="font-weight: 600; margin: 0; color: var(--fg); padding: 8px;">socials</p>
+            <p class="card-title">socials</p>
             <div class="nav">
 <!--                <p class="large-only js-required" style="margin-top: -30px; margin-right: -328px; font-size: 12px; color: var(&#45;&#45;fg2); padding: 8px;">use arrow keys!</p>-->
                 <a class="nav-item" href="/">home</a>
@@ -24,22 +24,29 @@
                 <a class="nav-item large-only" href="/extras">extras</a>
             </div>
         </div>
-        <div class="card-body" style="display: flex; justify-content: space-between; padding: 8px">
-            <div style="display: flex; align-items: center; flex-direction: column">
-                <img src="assets/profile-picture.jpg" alt="profile picture" style="width: 128px; height: 128px; border: 1px solid var(--bg_s);">
-                <div style="display: flex; align-items: center; margin-top: 12px">
-                    <div class="js-required status-symbol" style="margin-right: 6px;">
-                        <div class="status-symbol-ring"></div>
-                    </div>
-                    <code style="font-weight: 600; margin: 0">spagwhetti</code>
-                </div>
-                <code style="margin: 0; white-space: nowrap">silly</code>
-            </div>
-            <div style="margin-left: 16px;">
-                <p style="font-weight: 600; margin: 0; padding-bottom: 12px;">socials</p>
-                <p style="margin: 0; text-align: left;">hey here are my socials if you want them, i mostly post on instagram and i'm not very active on twitter. (but you can still message me there and i will probably reply)</p>
-                <p style="margin: 12px 0 0; text-align: left;"><a href="https://instagram.com/spogwhetti" target="_blank">Instagram</a></p>
-                <p style="margin: 12px 0 0; text-align: left;"><a href="https://twitter.com/spogwhetti" target="_blank">Twitter (X)</a></p>
+        <div class="card-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <ul class="styled-list">
+                <li class="list-element list-element-selected">
+                    <a href="https://instagram.com/spogwhetti" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: flex; align-items: center">
+                        <p style="width: 110px">instagram</p>
+                        <code>@spogwhetti</code>
+                    </a>
+                </li>
+                <li class="list-element">
+                    <a href="https://twitter.com/spogwhetti" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: flex; align-items: center">
+                        <p style="width: 110px">twitter</p>
+                        <code>@spogwhetti</code>
+                    </a>
+                </li>
+                <li class="list-element">
+                    <a href="https://github.com/spagwhetti" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: flex; align-items: center">
+                        <p style="width: 110px">github</p>
+                        <code>spagwhetti</code>
+                    </a>
+                </li>
+            </ul>
+            <div style="padding: 8px;">
+                <code style="color: var(--fg1);">click <code style="color: white;">/</code> press enter to open.</code>
             </div>
         </div>
     </div>
