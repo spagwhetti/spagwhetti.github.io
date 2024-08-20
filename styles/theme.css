@@ -1,17 +1,17 @@
 :root {
     --bg_h: #2c2d33;
-    --bg:   #424352;
+    --bg:   #353540;
     --bg_s: #535363;
     --bg1:  #3c3836;
     --bg2:  #504945;
     --bg3:  #665c54;
     --bg4:  #7c6f64;
 
-    --fg:  #fbf1c7;
-    --fg1: #ebdbb2;
-    --fg2: #d5c4a1;
-    --fg3: #bdae93;
-    --fg4: #a89984;
+    --fg:  #cfb2ca;
+    --fg1: #cfb2ca;
+    --fg2: #cfb2ca;
+    --fg3: #cfb2ca;
+    --fg4: #cfb2ca;
 
     --red:    #fb4934;
     --green:  #b8bb26;
