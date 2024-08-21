@@ -8,15 +8,15 @@
     <title>spagwhetti bolognese</title>
     <script src="scripts/index.js" defer></script>
     <link rel="stylesheet" href="styles/style.css">
-<!--    <noscript>-->
-<!--        <link rel="stylesheet" href="styles/noscript.css">-->
-<!--    </noscript>-->
+    <noscript>
+        <link rel="stylesheet" href="styles/noscript.css">
+    </noscript>
 </head>
 <body>
 <div id="container">
-    <div class="card" style="width: 768px; min-height: 256px; margin: 8px">
+    <div class="card" style="width: 768px; min-height: 256px; margin: 8px; display: flex; flex-direction: column;">
         <div class="card-header">
-            <p style="font-weight: 600; margin: 0; color: var(--fg); padding: 8px;">extras</p>
+            <p class="card-title">extras</p>
             <div class="nav">
 <!--                <p class="large-only js-required" style="margin-top: -30px; margin-right: -328px; font-size: 12px; color: var(&#45;&#45;fg2); padding: 8px;">use arrow keys!</p>-->
                 <a class="nav-item" href="/">home</a>
@@ -24,11 +24,23 @@
                 <a class="nav-item large-only nav-selected" href="/extras">extras</a>
             </div>
         </div>
-        <div class="card-body" style="display: flex; justify-content: space-between; padding: 8px;">
-            <div style="margin-left: 0px;">
-                <p style="margin: 12 0 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque, diam vel imperdiet viverra, velit purus fringilla tortor, eget euismod justo dui ac elit. Nulla facilisi. Nunc interdum, augue vitae blandit dignissim, diam erat maximus tortor, vitae malesuada est mi accumsan neque. Etiam consectetur et lacus sit amet fringilla. Nam tristique nisl eget justo ullamcorper consequat. Curabitur tristique tristique tempor. Nullam et magna at turpis luctus eleifend.</p>
-                <p style="margin: 12 0 0;"></p>
-                <p style="margin: 12 0 0;">yeah, i dont have anything to put here yet</p>
+        <div class="card-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <ul class="styled-list">
+                <li class="list-element list-element-selected">
+                    <a href="https://open.spotify.com/playlist/2l6EwuXnHpsrkjRHe3L94V" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: flex; align-items: center">
+                        <p style="width: 110px">music</p>
+                        <code>spotify playlist</code>
+                    </a>
+                </li>
+                <li class="list-element">
+                    <a href="https://charcoalfriends.tumblr.com/food" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: flex; align-items: center">
+                        <p style="width: 110px">crows</p>
+                        <code>what/how to feed wild crows</code>
+                    </a>
+                </li>
+            </ul>
+            <div style="padding: 8px;">
+                <code style="color: var(--fg1);">click <code style="color: white;">/</code> press enter to open.</code>
             </div>
         </div>
     </div>
