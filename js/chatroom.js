@@ -4,7 +4,7 @@ var messageInput = document.getElementById("message");
 function sendMessage() {
   var message = messageInput.value;
   chatbox.innerHTML += "<p>You: " + message + "</p>";
-  messageInput.value = "";
+  messageInput.value = ""; // Clear the message input field
 }
 
 messageInput.addEventListener("keydown", function(event) {
