@@ -3,8 +3,10 @@ var messageInput = document.getElementById("message");
 
 function sendMessage() {
   var message = messageInput.value;
-  chatbox.innerHTML += "<p>You: " + message + "</p>";
-  messageInput.value = ""; // Clear the message input field
+  if (message.trim() !== "") { // Check if the message is not empty
+    chatbox.innerHTML += "<p>You: " + message + "</p>";
+    messageInput.value = ""; // Clear the message input field
+  }
 }
 
 messageInput.addEventListener("keydown", function(event) {
