@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chatroom</title>
-  <style>
-    #chatbox {
-      height: 300px;
-      overflow-y: scroll;
-    }
-  </style>
+  <title>Simple Chatroom</title>
 </head>
 <body>
-  <div id="chatbox">
-    <p>Welcome to the chatroom!</p>
-  </div>
-  <form action="#">
-    <div>
-      <input type="text" id="message" placeholder="Enter your message" style="height: 300px; overflow-y: scroll;" autocomplete="off">
-      <input type="submit" value="Send">
-    </div>
-  </form>
-  <script src="chatroom.js"></script>
+  <div id="chatbox"></div>
+  <input type="text" id="message" placeholder="Enter your message" autocomplete="off">
+  <button onclick="sendMessage()">Send</button>
+
+  <script>
+    const chatbox = document.getElementById('chatbox');
+    const messageInput = document.getElementById('message');
+
+    function sendMessage() {
+      const message = messageInput.value;
+      chatbox.innerHTML += `<p>You: ${message}</p>`;
+      messageInput.value = '';
+    }
+  </script>
 </body>
 </html>
