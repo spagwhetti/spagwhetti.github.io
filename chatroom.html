@@ -11,6 +11,13 @@
   <script>
     const chatbox = document.getElementById('chatbox');
     const messageInput = document.getElementById('message');
+
+    messageInput.addEventListener("keydown", function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        sendMessage();
+      }
+    }
     
     function sendMessage() {
       const message = messageInput.value;
