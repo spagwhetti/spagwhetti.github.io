@@ -9,14 +9,8 @@
   <button onclick="sendMessage()">Send</button>
 
   <script>
-    const socket   
- = io();
     const chatbox = document.getElementById('chatbox');
     const messageInput = document.getElementById('message');
-
-    socket.on('chat message', (msg) => {
-      chatbox.innerHTML += `<p>${msg}</p>`;
-    });
     
     function sendMessage() {
       const message = messageInput.value;
