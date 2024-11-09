@@ -25,6 +25,18 @@ server.listen(3000, () => {
 var chatbox = document.getElementById("chatbox");
 var messageInput = document.getElementById("message");
 
+function fetchMessages() {
+  $.ajax({
+    url: 'fetch_messages.php',
+    type: 'GET',
+    success: function(data) {
+      $('#chatbox').html(data);
+    }
+  });
+}
+
+setInterval(fetchMessages, 1000); // Fetch new messages every second
+
 function sendMessage() {
   var message = messageInput.value;
   if (message.trim() !== "") { // Check if the message is not empty
