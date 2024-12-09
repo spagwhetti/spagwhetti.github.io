@@ -221,6 +221,7 @@ nav {
 	display: flex;
 	gap: 2ch;
 	margin-block-end: 1.1rem;
+	text-align: left;
 }
 
 nav span::before,
