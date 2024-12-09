@@ -200,11 +200,11 @@ a {
 }
 
 a:hover {
-	text-decoration: underline;
+	text-decoration-line: underline;
 }
 
 a:active {
-	text-decoration: underline;
+	text-decoration-line: underline;
 }
 
 small {
