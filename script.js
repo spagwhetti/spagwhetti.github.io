@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const DATA_FOR_WEBRING = `https://raw.githubusercontent.com/spag-site/spag-site.github.io/main/webring/webring.json`;
+  const DATA_FOR_WEBRING = `https://raw.githubusercontent.com/spagwhetti/spagwhetti.github.io/main/webring.json`;
   const list = document.getElementById("peoplelist");
   const count = document.getElementById("peoplecount");
 
