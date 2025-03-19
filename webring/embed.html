@@ -1,0 +1,97 @@
+
+<!-- this file is just so i could make a custom embed of the silly city webring for myself
+      i do not own/maintain or have any affiliation with the silly city webring except being in it -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <base target="_parent">
+    <link rel="icon" type="image/jpg" href="assets/favicon.jpg"/>
+
+    <title></title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+      :root {
+          --blue: #60a5fa;
+          --pink: #e86dd4;
+          --white: #ffffff;
+          --background: #0a0a0a
+      }
+
+      * {
+        font-family: Merriweather, Georgia, serif;
+        color: var(--white)
+      }
+
+      html {
+        background-color: var(--background);
+      }
+
+      html, body {
+        text-colour: var(--white);
+        height: 100%;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+
+      body {
+        display: flex;
+
+        padding: 0.5em;
+
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: center;
+      }
+
+      a {
+        display: inline-block;
+        color: inherit;
+        position: relative;
+        text-decoration: none;
+        transition: linear 0.2s;
+        color: var(--white);
+      }
+
+      a:before {
+        background: var(--pink);
+        content: '';
+        height: 2px;
+        position: absolute;
+        bottom: -1.5px;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: width 0.2s ease-in-out;
+      }
+
+      a:hover{
+        color: var(--pink);
+      }
+
+      a:hover:before{
+        width: 0;
+      }
+
+      #left { text-align: left; }
+      #mid { text-align: center; }
+      #right { text-align: right; }
+
+      #left, #right {
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <span id="left">« <a href="https://silly.city/prev?user=spagwhetti" id="prev">prev</a></span>
+    <span id="mid"> 🩷 <a href="https://silly.city/" id="header">silly city webring</a> 🩷 </span>
+    <span id="mid"><a href="https://silly.city/random" id="random" style="font-size:60%;">random!</a></span>
+    <span id="right"><a href="https://silly.city/prev?user=spagwhetti" id="next">next</a> »</span>
+  </body>
+</html>
