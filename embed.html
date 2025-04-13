@@ -77,14 +77,14 @@
     const background = urlParams.get('background');
     const text = urlParams.get('text')
 
-    if (colour){
+    if (background){
       var r = document.querySelector(':root');
-      r.style.setProperty('--background', background);
+      r.style.setProperty('--background', '#' + background);
     }
 
     if (text){
       var r = document.querySelector(':root');
-      r.style.setProperty('--text', text);
+      r.style.setProperty('--text', '#' + text);
     }
     
     const left = document.getElementById("prev")
