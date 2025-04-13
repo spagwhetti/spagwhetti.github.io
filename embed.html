@@ -8,17 +8,14 @@
     <title>bolognese embed</title>
 
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
       :root {
-          --textcolour: #ffffff;
-          --linkcolour: #d92941;
-          --background: #0a0a0a;
+          --text: #0a0a0a;
+          --background: #ffffff;
       }
 
       * {
-        font-family: 'JetBrains Mono NL', 'JetBrains Mono', monospace;
-        color: var(--textcolour);
+        font-family: 'Neue Haas Grotesk', sans-serif;
+        color: var(--text);
       }
 
       html {
@@ -46,12 +43,12 @@
         display: inline-block;
         color: inherit;
         position: relative;
-        text-decoration: none;
-        transition: linear 0.2s;
-        color: var(--textcolour);
+        text-decoration: underline;
+        /*transition: linear 0.2s;*/
+        color: var(--text);
       }
 
-      a:before {
+      /*a:before {
         background: var(--linkcolour);
         content: '';
         height: 2px;
@@ -61,13 +58,14 @@
         left: 50%;
         transform: translateX(-50%);
         transition: width 0.2s ease-in-out;
-      }
+      }*/
 
       a:hover{
-        color: var(--linkcolour);
+        color: var(--background);
+        background: var(--text)
       }
 
-      a:hover:before{
+      /*a:hover:before{
         width: 0;
       }
 
@@ -78,14 +76,20 @@
       #left, #right {
         flex-grow: 1;
         flex-basis: 0;
-      }
+      }*/
 
     </style>
   </head>
   <body style="justify-content: space-between;">
-    <span id="left">« <a href="https://spagwhetti.github.io/redirect.html?to=prev" id="prev">prev</a></span>
-    <span id="mid"> 🍝 <a href="https://daisy.nekoweb.org/webring" id="header">bolognese ring</a> 🍝 </span>
-    <span id="right"><a href="https://spagwhetti.github.io/redirect.html?to=next" id="next">next</a> »</span>
+    <span>
+      <a href="https://spagwhetti.github.io/redirect.html?to=prev" id="prev">prev</a>
+    </span>
+    <span>
+      <a href="https://daisy.nekoweb.org/webring" id="header">bolognese ring</a>
+    </span>
+    <span>
+      <a href="https://spagwhetti.github.io/redirect.html?to=next" id="next">next</a>
+    </span>
   </body>
 
 
