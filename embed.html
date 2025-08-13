@@ -9,17 +9,20 @@
 
     <style>
       :root {
-          --text: #558ce6;
-          --background: #234;
+        --black: #161719;
+        --dark-grey: #505050;
+        --grey: #a0a0a0;
+        --white: #dbdad8;
+        --bright-white: #f0f0f0;
       }
 
       * {
-        font-family: 'Neue Haas Grotesk', sans-serif;
-        color: var(--text);
+        font-family: Helvetica, sans-serif;
+        color: var(--black;
       }
 
       html {
-        background-color: var(--background);
+        background-color: var(--bright-white);
       }
 
       html, body {
@@ -44,12 +47,13 @@
         color: inherit;
         position: relative;
         text-decoration: underline;
-        color: var(--text);
+        color: var(--black);
       }
 
       a:hover{
-        color: #7dadfa;
-        text-decoration: underline
+        color: var(--bright-white);
+        background: var(--black);
+        text-decoration: none;
       }
 
     </style>
@@ -73,18 +77,6 @@
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const name = urlParams.get('name');
-    const background = urlParams.get('background');
-    const text = urlParams.get('text')
-
-    if (background){
-      var r = document.querySelector(':root');
-      r.style.setProperty('--background', '#' + background);
-    }
-
-    if (text){
-      var r = document.querySelector(':root');
-      r.style.setProperty('--text', '#' + text);
-    }
     
     const left = document.getElementById("prev")
     const right = document.getElementById("next")
