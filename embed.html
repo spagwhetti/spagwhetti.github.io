@@ -18,7 +18,7 @@
 
       * {
         font-family: Helvetica, sans-serif;
-        color: var(--black;
+        color: var(--black);
       }
 
       html {
@@ -78,8 +78,8 @@
     const urlParams = new URLSearchParams(queryString);
     const name = urlParams.get('name');
     
-    const left = document.getElementById("prev")
-    const right = document.getElementById("next")
+    const left = document.getElementById("prev");
+    const right = document.getElementById("next");
 
     fetch(DATA_FOR_WEBRING)
       .then((response) => response.json())
