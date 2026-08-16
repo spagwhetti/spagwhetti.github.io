@@ -9,20 +9,17 @@
 
     <style>
       :root {
-        --black: #161719;
-        --dark-grey: #505050;
-        --grey: #a0a0a0;
-        --white: #dbdad8;
-        --bright-white: #f0f0f0;
+        --primary: #ffffff;
+        --secondary: #000000;
       }
 
       * {
         font-family: Helvetica, sans-serif;
-        color: var(--black);
+        color: var(--secondary);
       }
 
       html {
-        background-color: var(--bright-white);
+        background: var(--primary);
       }
 
       html, body {
@@ -36,6 +33,7 @@
         display: flex;
 
         padding: 0.5em;
+        border: 1px solid var(--secondary);
 
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -47,12 +45,12 @@
         color: inherit;
         position: relative;
         text-decoration: underline;
-        color: var(--black);
+        color: var(--secondary);
       }
 
       a:hover{
-        color: var(--bright-white);
-        background: var(--black);
+        color: var(--primary);
+        background: var(--secondary);
         text-decoration: none;
       }
 
