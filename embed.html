@@ -1,90 +1,42 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <base target="_parent">
-    <link rel="icon" type="image/jpg" href="favicon.ico"/>
-
-    <title>bolognese embed</title>
-
-    <style>
-      :root {
-        --primary: #ffffff;
-        --secondary: #000000;
-      }
-
-      * {
-        font-family: Helvetica, sans-serif;
-        color: var(--secondary);
-      }
-
-      html {
-        background: var(--primary);
-      }
-
-      html, body {
-        height: 100%;
-        margin: 0;
-        box-sizing: border-box;
-      }
-
-
-      body {
-        display: flex;
-
-        padding: 0.5em;
-        border: 1px solid var(--secondary);
-
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-content: center;
-      }
-
-      a {
-        display: inline-block;
-        color: inherit;
-        position: relative;
-        text-decoration: underline;
-        color: var(--secondary);
-      }
-
-      a:hover{
-        color: var(--primary);
-        background: var(--secondary);
-        text-decoration: none;
-      }
-
-    </style>
-  </head>
-  <body style="justify-content: space-between;">
-    <span>
-      <a id="prev" href="https://spagwhetti.github.io/redirect.html?to=prev" id="prev">prev</a>
-    </span>
-    <span>
-      <a href="https://spaghetti.nekoweb.org/webring" id="header">bolognese ring</a>
-    </span>
-    <span>
-      <a id="next" href="https://spagwhetti.github.io/redirect.html?to=next" id="next">next</a>
-    </span>
-  </body>
-
-
-  <script>
-    const DATA_FOR_WEBRING = `https://raw.githubusercontent.com/spagwhetti/spagwhetti.github.io/main/webring.json`;
-
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const name = urlParams.get('name');
+<html>
+<head>
+  <style>
+    :root {
+      --primary: #ffffff;
+      --secondary: #000000;
+    }
     
-    const left = document.getElementById("prev");
-    const right = document.getElementById("next");
+    body {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: center;
+      color: var(--secondary);
+      background: var(--primary);
+      border: 1px solid var(--secondary);
+      box-sizing: border-box;
+      padding: 8px;
+      margin: 0;
+    }
 
-    fetch(DATA_FOR_WEBRING)
-      .then((response) => response.json())
-      .then((sites) => {
-        left.href += "&name=" + name;
-        right.href += "&name=" + name;
+    a {
+      color: var(--secondary);
+      background: none;
+      text-decoration: underline;
+    }
 
-      });
-  </script>
+    a:hover{
+      color: var(--primary);
+      background: var(--secondary);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <a id="prev" href="https://spagwhetti.github.io/redirect.html?to=prev">prev</a>
+  <a id="header" href="https://spaghetti.nekoweb.org/webring">bolognese webring</a>
+  <a id="next" href="https://spagwhetti.github.io/redirect.html?to=next">next</a>
+  <script src="https://raw.githubusercontent.com/spagwhetti/spagwhetti.github.io/main/webring.js">
+</body>
 </html>
