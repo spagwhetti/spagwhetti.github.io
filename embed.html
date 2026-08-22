@@ -39,6 +39,21 @@
   <a id="prev" href="https://spagwhetti.github.io/redirect.html?to=prev">prev</a>
   <a id="header" href="https://spaghetti.nekoweb.org/webring">bolognese webring</a>
   <a id="next" href="https://spagwhetti.github.io/redirect.html?to=next">next</a>
-  <script type="text/javascript" src="https://raw.githubusercontent.com/spagwhetti/spagwhetti.github.io/main/webring.js">
+  <script>
+    const DATA_FOR_WEBRING = `https://raw.githubusercontent.com/spagwhetti/spagwhetti.github.io/main/webring.json`;
+    
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const name = decodeURI(urlParams.get('name'));
+    const prev = document.getElementById("prev")
+    const next = document.getElementById("next")
+    
+    fetch(DATA_FOR_WEBRING)
+    .then((response) => response.json())
+      .then((sites) => {
+      prev.href += "&name=" + name;
+      next.href += "&name=" + name;
+    });
+  </script>
 </body>
 </html>
